@@ -20,23 +20,23 @@ function MatrixRotator(matrix){
 //                                         v        or Direction.CCW
 MatrixRotator.prototype.rotate = function(direction) {
   // do work here
-  var newMatrix = [];
-  var matrixLen = this.matrix.length;
+  let newMatrix = [];
+  const matrixLen = this.matrix.length;
 
   if (direction === Direction.CW) {
-  	for (var i = 0; i < matrixLen; i++) {
+  	for (let i = 0; i < matrixLen; i++) {
   		newMatrix[i] = [];
-  		for (var j = 0; j < matrixLen; j++) {
+  		for (let j = 0; j < matrixLen; j++) {
   			newMatrix[i][j] = this.matrix[matrixLen - 1 - j][i];
   		}
   	}
-  } 
+  }
 
   if (direction === Direction.CCW) {
-  	for (var k = 0; k < matrixLen; k++) {
-  		newMatrix[k] = [];
-  		for (var l = 0; l < matrixLen; l++) {
-  			newMatrix[k][l] = this.matrix[l][matrixLen - 1 - k];
+  	for (let i = 0; i < matrixLen; i++) {
+  		newMatrix[i] = [];
+  		for (let j = 0; j < matrixLen; j++) {
+  			newMatrix[i][j] = this.matrix[j][matrixLen - 1 - i];
   		}
   	}
   }
