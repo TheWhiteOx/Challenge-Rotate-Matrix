@@ -15,8 +15,6 @@ function MatrixRotator(matrix){
   this.matrix = matrix;
 };
 
-//                                         |-- Must be Direction.CW
-//                                         v        or Direction.CCW
 MatrixRotator.prototype.rotate = function(direction) {
   let newMatrix = [];
   const matrixLen = this.matrix.length;
